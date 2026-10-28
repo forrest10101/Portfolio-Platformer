@@ -17,16 +17,13 @@ public class SideScrollerController : MonoBehaviour
     public LayerMask groundLayer = ~0;
     public float groundCheckDistance = 0.5f;
 
-    [Header("VISUALS (optional)")]
-    [Tooltip("Model to rotate so it faces the movement direction.")]
-    public Transform model;
-    public float turnSpeed = 15f;
+  
 
     private CharacterController _controller;
     private Vector3 _velocity;
     private bool _isGrounded;
     private float _lockedX;
-    private float _facing = 1f;
+    
 
 
 
@@ -47,7 +44,7 @@ public class SideScrollerController : MonoBehaviour
         CheckGround();
         HandleMovement();
         LockXAxis();
-        HandleFacing();
+        
 
         if (Input.GetKeyDown(KeyCode.LeftControl))
         {
@@ -93,11 +90,10 @@ public class SideScrollerController : MonoBehaviour
             _velocity.y += gravity * Time.deltaTime;
 
             // Only Z (sideways) and Y (jump/fall). X is never touched.
-            Vector3 move = new Vector3(0f, _velocity.y, zMove);
+            Vector3 move = new Vector3(transform.position.x, _velocity.y, zMove);
             _controller.Move(move * Time.deltaTime);
 
-            if (Mathf.Abs(input) > 0.1f)
-                _facing = Mathf.Sign(input);
+        
         }
 
 
@@ -110,8 +106,7 @@ public class SideScrollerController : MonoBehaviour
             if (Input.GetButtonDown("Jump") && _isGrounded)
                 _velocity.y = Mathf.Sqrt(jumpHeight * -2f * gravity);
 
-            //if (standingHeightMarker != null)
-            //    standingHeightMarker.transform.position = new Vector3(transform.position.x, transform.position.y + _markerHeightOffset, transform.position.z);
+           
 
             _controller.Move(moveInput * speed * Time.deltaTime);
             _velocity.y += gravity * Time.deltaTime;
@@ -135,10 +130,5 @@ public class SideScrollerController : MonoBehaviour
         }
     }
 
-    private void HandleFacing()
-    {
-        if (model == null) return;
-        Quaternion target = Quaternion.LookRotation(Vector3.forward * _facing * rightDirection);
-        model.rotation = Quaternion.Slerp(model.rotation, target, Time.deltaTime * turnSpeed);
-    }
+    
 }
