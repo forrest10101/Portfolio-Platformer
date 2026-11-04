@@ -30,6 +30,7 @@ public class SideScrollerController : MonoBehaviour
 
     private int Cam = 1;
     // 1 = Front  2 = Side
+
     public GameObject FrontCam;
     public GameObject SideCam;
 
@@ -43,7 +44,7 @@ public class SideScrollerController : MonoBehaviour
     {
         CheckGround();
         HandleMovement();
-        LockXAxis();
+        //LockXAxis();
         
 
         if (Input.GetKeyDown(KeyCode.LeftControl))
@@ -90,7 +91,7 @@ public class SideScrollerController : MonoBehaviour
             _velocity.y += gravity * Time.deltaTime;
 
             // Only Z (sideways) and Y (jump/fall). X is never touched.
-            Vector3 move = new Vector3(transform.position.x, _velocity.y, zMove);
+            Vector3 move = new Vector3(0, _velocity.y, zMove);
             _controller.Move(move * Time.deltaTime);
 
         
@@ -115,7 +116,7 @@ public class SideScrollerController : MonoBehaviour
     }
 
     // Safety net: collisions or slopes can nudge X, so pin it back.
-    private void LockXAxis()
+    /*private void LockXAxis()
     {
         if (Cam == 2)
         {
@@ -129,6 +130,6 @@ public class SideScrollerController : MonoBehaviour
             }
         }
     }
-
+    */
     
 }
