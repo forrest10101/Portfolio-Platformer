@@ -23,8 +23,8 @@ public class SideScrollerController : MonoBehaviour
     private Vector3 _velocity;
     private bool _isGrounded;
     private float _lockedX;
-    
 
+    public PerspectivePlats perspectivePlats;
 
 
 
@@ -53,6 +53,8 @@ public class SideScrollerController : MonoBehaviour
             {
                 FrontCam.SetActive(false);
                 SideCam.SetActive(true);
+                perspectivePlats.sideOnly();
+                
                 Cam = 2;
 
             }
@@ -61,6 +63,7 @@ public class SideScrollerController : MonoBehaviour
             {
                 FrontCam.SetActive(true);
                 SideCam.SetActive(false);
+                perspectivePlats.frontOnly();
                 Cam = 1;
             }
         }
@@ -115,21 +118,6 @@ public class SideScrollerController : MonoBehaviour
         }
     }
 
-    // Safety net: collisions or slopes can nudge X, so pin it back.
-    /*private void LockXAxis()
-    {
-        if (Cam == 2)
-        {
-            Vector3 pos = transform.position;
-            if (!Mathf.Approximately(pos.x, _lockedX))
-            {
-                _controller.enabled = false;   // CharacterController overrides direct position changes
-                pos.x = _lockedX;
-                transform.position = pos;
-                _controller.enabled = true;
-            }
-        }
-    }
-    */
+    
     
 }
