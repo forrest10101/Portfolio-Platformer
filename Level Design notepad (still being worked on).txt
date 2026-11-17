@@ -1,0 +1,5 @@
+Level design
+
+Techno sprint's level designs acts as a key point of the game not only in the gameplay but as a way to show the narrative. You play as a character called proto who after witnessing the screen malfunction they are pulled inside the computer. Proto sets out to find a way home. However, escaping the computer is far from simple. Each area represents a different part of the PC, such as the CPU, RAM, Cooling systems and power. These areas have their own environments and obstacles based on how the components work with the theme of failure. This means that the design of each level will incorporate features on how failing components affect a pc.
+
+There is 6 planned levels for Techno sprint, Corruption (based off of RAM/ROM), Artfacting (based off of GPU), Meltdown (based off of cooling systems), Voltage Drop (based off of power supply, Broken (based off of a Motherboard), and finally Malware being a combination of every level.
