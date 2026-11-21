@@ -1,22 +1,22 @@
 Level design
 
-Techno sprint's level designs acts as a key point of the game not only in the gameplay but as a way to show the narrative. You play as a character called proto who after witnessing the screen malfunction they are pulled inside the computer. Proto sets out to find a way home. However, escaping the computer is far from simple. Each area represents a different part of the PC, such as the CPU, RAM, Cooling systems and power. These areas have their own environments and obstacles based on how the components work with the theme of failure. This means that the design of each level will incorporate features on how failing components affect a pc. There is 6 planned levels for Techno sprint, Corruption (based off of RAM/ROM), Artifacting (based off of GPU), Meltdown (based off of cooling systems), Voltage Drop (based off of power supply), Broken (based off of a Motherboard), and finally Malware being a combination of every level.
+Techno sprint's level designs acts as a key point of the game not only in the gameplay but as a way to show the narrative. You play as a character called proto who after witnessing the screen malfunction they are pulled inside the computer. Proto sets out to find a way home. However, escaping the computer is far from simple. Each area represents a different part of the PC, such as the CPU, RAM, Cooling systems and power. These areas have their own environments and obstacles based on how the components work with the theme of failure. This means that the design of each level will incorporate features on how failing components affect a pc. There is 6 planned levels for Techno sprint, Corruption (based off of RAM), Artifacting (based off of GPU), Meltdown (based off of cooling systems), Voltage Drop (based off of power supply), Broken (based off of a Motherboard), and finally Malware being a combination of every level.
 
 Corruption
-Corruption is the first level in the game which will focus on
+Corruption is the first level in the game which will focus on the key mechanic of temporary platforms, which means that some platforms only support your character for a limited time or under specific conditions. Common examples are Crumbling/falling platforms that shake, crack, or collapse shortly after you step on them and some reform shortly after collapsing. Another is timed platforms meaning they phase in and out on a fixed cycle regardless of what your character does, requiring rhythmic jumps. A final one being conditional platforms meaning they stay active only while a timer runs, a switch is held, or a resource/ability lasts. These types of platforms are usually used over hazards or gaps to add urgency, timing, and tension. It is planned to use timed platforms to fit the theming of Techno sprint as the level takes place in the PC's RAM as it constantly clears, overwrites, and refreshes data while a PC runs.
  
 Artifacting
-Artifacting is the second level in the game which will focus on
+Artifacting is the second level in the game which will focus on the key mechanic of Perspective-Based Object Manipulation, which means on screen is a glitching wall/object and you need to change the camera perspective from 3D to 2D (vice versa) to fix or make the object disappear allowing the player to go through the object or stand on it. This has been planned it the theming of Techno sprint as the level takes place in the PC's GPU which is designed to rapidly process and render images, 3D graphics, and videos and when a GPU start to fail it can cause visual glitches matching the theme of failure perfectly.
 
 Meltdown
-Meltdown is the second level in the game which will focus on
+Meltdown is the second level in the game which will focus on the key mechanic of Thermal Overload, which is an environmental mechanic where the level gradually increases in temperature and once the temperature reaches a specific threshold, ventilation fans automatically activate, producing strong air currents that push the player in the direction the fans are facing. The player must use environment to there advantage to navigate obstacles and reach otherwise inaccessible areas. This has been planned as it matches the theming of Techno sprint as the level takes place in the PC's Cooling System which removes heat from components like the CPU and GPU to prevent thermal throttling and hardware damage and when it starts to fail PC's tend to start overheating and causing sudden shutdowns, thermal throttling, or crashes.
 
 Voltage Drop
-Voltage Drop is the third level in the game which will focus on
+Voltage Drop is the third level in the game which will focus on the key mechanic of
 
 Broken
-Broken is the forth level in the game which will focus on 
+Broken is the forth level in the game which will focus on the key mechanic of
 
 Malware
-Malware is the final level in the game which will focus on
+Malware is the final level in the game which will focus on the key mechanic of
  
