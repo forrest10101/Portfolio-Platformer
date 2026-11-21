@@ -12,7 +12,7 @@ Meltdown
 Meltdown is the second level in the game which will focus on the key mechanic of Thermal Overload, which is an environmental mechanic where the level gradually increases in temperature and once the temperature reaches a specific threshold, ventilation fans automatically activate, producing strong air currents that push the player in the direction the fans are facing. The player must use environment to there advantage to navigate obstacles and reach otherwise inaccessible areas. This has been planned as it matches the theming of Techno sprint as the level takes place in the PC's Cooling System which removes heat from components like the CPU and GPU to prevent thermal throttling and hardware damage and when it starts to fail PC's tend to start overheating and causing sudden shutdowns, thermal throttling, or crashes.
 
 Voltage Drop
-Voltage Drop is the third level in the game which will focus on the key mechanic of
+Voltage Drop is the third level in the game which will focus on the key mechanic being a Voltage System, 
 
 Broken
 Broken is the forth level in the game which will focus on the key mechanic of
