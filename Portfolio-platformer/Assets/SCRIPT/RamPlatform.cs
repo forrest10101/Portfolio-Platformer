@@ -1,35 +1,30 @@
 using Unity.VisualScripting;
 using UnityEngine;
+using System.Collections;
 
 public class RamPlatform : MonoBehaviour
 {
-    public static RamPlatform Instance;
+    public GameObject Set1;
+    public GameObject Set2;
 
-
-    MeshRenderer meshRenderer;
-    BoxCollider boxCollider;
-
-    void Awake()
+    void Start()
     {
-        Instance = this;
-
-        meshRenderer = GetComponent<MeshRenderer>();
-        boxCollider = GetComponent<BoxCollider>();
+        StartCoroutine(PlatformSwitch());
     }
 
-
-    void Update()
+    IEnumerator PlatformSwitch()
     {
-        if (Input.GetKeyDown(KeyCode.Q))
+        while (true)
         {
-            meshRenderer.enabled = false;
-            boxCollider.enabled = false;
-        }
+            Set1.SetActive(true);
+            Set2.SetActive(false);
 
-        if (Input.GetKeyDown(KeyCode.E))
-        {
-            meshRenderer.enabled = true;
-            boxCollider.enabled = true;
+            yield return new WaitForSeconds(1);
+
+            Set1.SetActive(false);
+            Set2.SetActive(true);
+
+            yield return new WaitForSeconds(1);
         }
     }
 

@@ -11,7 +11,7 @@ public class SideScrollerController : MonoBehaviour
     public float gravity = -25f;
 
     [Tooltip("1 if pressing right should move toward +Z, -1 for -Z. Depends on which side your camera is on.")]
-    public int rightDirection = 1;
+    public int rightDirection = -1;
 
     [Header("GROUND CHECK")]
     public LayerMask groundLayer = ~0;
@@ -24,11 +24,11 @@ public class SideScrollerController : MonoBehaviour
     private bool _isGrounded;
     private float _lockedX;
 
-    public PerspectivePlats perspectivePlats;
+    
 
 
 
-    private int Cam = 1;
+    private int Cam = 2;
     // 1 = Front  2 = Side
 
     public GameObject FrontCam;
@@ -51,20 +51,32 @@ public class SideScrollerController : MonoBehaviour
         {
             if (Cam == 1)
             {
+                Cam = 2;
                 FrontCam.SetActive(false);
                 SideCam.SetActive(true);
-                perspectivePlats.sideOnly();
+
+                if (PerspectivePlats.Instance != null)
+                {
+                    PerspectivePlats.Instance.sideOnly();
+                }
                 
-                Cam = 2;
+                
+                
 
             }
 
             else if (Cam == 2)
             {
+                Cam = 1;
                 FrontCam.SetActive(true);
                 SideCam.SetActive(false);
-                perspectivePlats.frontOnly();
-                Cam = 1;
+
+                if (PerspectivePlats.Instance != null)
+                {
+                    PerspectivePlats.Instance.frontOnly();
+                }
+                
+                
             }
         }
     }
@@ -85,8 +97,8 @@ public class SideScrollerController : MonoBehaviour
 
         if (Cam == 2)
         {
-            float input = Input.GetAxis("Horizontal");          // A/D or arrows
-            float zMove = input * rightDirection * speed;
+            float input = Input.GetAxis("Horizontal");          // A/D or * rightDirection
+            float zMove = input  * speed;
 
             if (Input.GetButtonDown("Jump") && _isGrounded)
                 _velocity.y = Mathf.Sqrt(jumpHeight * -2f * gravity);
